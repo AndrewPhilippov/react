@@ -1,26 +1,12 @@
-<!-- code to insert in codepen.io -->
-<!-- insert react and react-dom libraries to your JS section in codepen.io -->
+<!--code to insert in codepen.io
+insert babel for js
+insert react and react-dom libraries to your JS section in codepen.io-->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<!-- Working pen is HERE ->>>>> https://codepen.io/AndrewPhilippov/pen/MWaoKXa -->
+<style>
+  .special {
+    color: orange;
+  }
+</style>
 <div id="app"></div>
-<script>
-    function OurApp () {
-        return React.createElement("div", null, [
-            React.createElement("h1", null, "Our Amazing App Header"),
-            React.createElement("p", null, `The current time is ${new Date().toLocaleString()}.`),
-            React.createElement("small", null, "Copyright Footer Text")
-        ])
-    }
-
-    setInterval(function () {
-        ReactDOM.render(React.createElement(OurApp), document.querySelector("#app"))
-    }, 1000)
-</script>
-</body>
-</html>
+<script src="index.jsx"></script>
