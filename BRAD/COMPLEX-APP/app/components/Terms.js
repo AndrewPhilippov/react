@@ -1,8 +1,9 @@
-import React from 'react'
+import React     from 'react'
+import Container from './Container'
 
 function Terms () {
     return (
-        <div className="container container--narrow py-md-5">
+        <Container>
             <h2>Our Terms &amp; Conditions</h2>
             <p className="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorum
                 labore quisquam vel id dicta fuga! Ducimus, quo. Dolore commodi aliquid error veritatis
@@ -19,7 +20,7 @@ function Terms () {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laboriosam distinctio atque sint earum?
                 Temporibus, voluptas aspernatur aliquam nisi sed harum laborum, nemo odio animi officia quisquam.
                 Veniam, natus reprehenderit.</p>
-        </div>
+        </Container>
     )
 }
 
