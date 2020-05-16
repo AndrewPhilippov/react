@@ -37,12 +37,12 @@ exports.apiMustBeLoggedIn = function (req, res, next) {
 
 exports.doesUsernameExist = function (req, res) {
   User.findByUsername(req.body.username.toLowerCase())
-    .then(function () {
-      res.json(true)
-    })
-    .catch(function (e) {
-      res.json(false)
-    })
+      .then(function () {
+        res.json(true)
+      })
+      .catch(function (e) {
+        res.json(false)
+      })
 }
 
 exports.doesEmailExist = async function (req, res) {
@@ -75,33 +75,33 @@ exports.sharedProfileData = async function (req, res, next) {
 exports.apiLogin = function (req, res) {
   let user = new User(req.body)
   user
-    .login()
-    .then(function (result) {
-      res.json({
-        token: jwt.sign({ _id: user.data._id, username: user.data.username, avatar: user.avatar }, process.env.JWTSECRET, { expiresIn: tokenLasts }),
-        username: user.data.username,
-        avatar: user.avatar
+      .login()
+      .then(function (result) {
+        res.json({
+                   token: jwt.sign({ _id: user.data._id, username: user.data.username, avatar: user.avatar }, process.env.JWTSECRET, { expiresIn: tokenLasts }),
+                   username: user.data.username,
+                   avatar: user.avatar
+                 })
       })
-    })
-    .catch(function (e) {
-      res.json(false)
-    })
+      .catch(function (e) {
+        res.json(false)
+      })
 }
 
 exports.apiRegister = function (req, res) {
   let user = new User(req.body)
   user
-    .register()
-    .then(() => {
-      res.json({
-        token: jwt.sign({ _id: user.data._id, username: user.data.username, avatar: user.avatar }, process.env.JWTSECRET, { expiresIn: tokenLasts }),
-        username: user.data.username,
-        avatar: user.avatar
+      .register()
+      .then(() => {
+        res.json({
+                   token: jwt.sign({ _id: user.data._id, username: user.data.username, avatar: user.avatar }, process.env.JWTSECRET, { expiresIn: tokenLasts }),
+                   username: user.data.username,
+                   avatar: user.avatar
+                 })
       })
-    })
-    .catch(regErrors => {
-      res.status(500).send(regErrors)
-    })
+      .catch(regErrors => {
+        res.status(500).send(regErrors)
+      })
 }
 
 exports.apiGetHomeFeed = async function (req, res) {
@@ -115,22 +115,22 @@ exports.apiGetHomeFeed = async function (req, res) {
 
 exports.ifUserExists = function (req, res, next) {
   User.findByUsername(req.params.username)
-    .then(function (userDocument) {
-      req.profileUser = userDocument
-      next()
-    })
-    .catch(function (e) {
-      res.json(false)
-    })
+      .then(function (userDocument) {
+        req.profileUser = userDocument
+        next()
+      })
+      .catch(function (e) {
+        res.json(false)
+      })
 }
 
 exports.profileBasicData = function (req, res) {
   res.json({
-    profileUsername: req.profileUser.username,
-    profileAvatar: req.profileUser.avatar,
-    isFollowing: req.isFollowing,
-    counts: { postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount }
-  })
+             profileUsername: req.profileUser.username,
+             profileAvatar: req.profileUser.avatar,
+             isFollowing: req.isFollowing,
+             counts: { postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount }
+           })
 }
 
 exports.profileFollowers = async function (req, res) {
