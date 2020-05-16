@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Container            from './Container'
 
 function About () {
+    useEffect( () => {
+        document.title = 'About Us | Complex App'
+        window.scrollTo( 0, 0 )
+    }, [] )
+
     return (
-        <div className="container container--narrow py-md-5">
+        <Container>
             <h2>About Us</h2>
             <p className="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorum
                 labore quisquam vel id dicta fuga! Ducimus, quo. Dolore commodi aliquid error veritatis
@@ -15,7 +21,7 @@ function About () {
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates quisquam possimus
                 tenetur, dicta enim rerum quis, quaerat id nobis provident quo dolorum sapiente temporibus facere
                 non repellendus consequatur cupiditate!</p>
-        </div>
+        </Container>
     )
 }
 
