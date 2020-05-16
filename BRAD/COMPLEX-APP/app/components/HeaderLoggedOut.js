@@ -8,14 +8,17 @@ function HeaderLoggedOut ( props ) {
     async function handleSubmit ( e ) {
         e.preventDefault()
         try {
-            const response = await Axios.post( 'http://localhost:3333/login', {
+            const response = await Axios.post( '/login', {
                 username,
                 password
             } )
-            if (response.data) {
-                console.log( 'response ', response.data )
+            if ( response.data ) {
+                localStorage.setItem( 'appToken', response.data.token )
+                localStorage.setItem( 'appUsername', response.data.username )
+                localStorage.setItem( 'appAvatar', response.data.avatar )
+                props.setLoggedIn( true )
             } else {
-               console.log('Incorrect username/password')
+                console.log( 'Incorrect username/password' )
             }
         } catch (e) {
             console.log( 'There was a problem.' )

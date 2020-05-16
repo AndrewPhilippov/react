@@ -7,10 +7,10 @@ function HomeGuest () {
     const [ email, setEmail ] = useState()
     const [ password, setPassword ] = useState()
 
-    async function handleSubmit ( e ) {
+    async function handleSubmit (e) {
         e.preventDefault()
         try {
-            await Axios.post( 'http://localhost:3333/register', {
+            await Axios.post( '/register', {
                 username,
                 email,
                 password
@@ -44,7 +44,7 @@ function HomeGuest () {
                                    className="form-control"
                                    type="text"
                                    placeholder="Pick a username"
-                                   autoComplete="off"/>
+                                   autoComplete="off" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email-register" className="text-muted mb-1">
@@ -56,7 +56,7 @@ function HomeGuest () {
                                    className="form-control"
                                    type="text"
                                    placeholder="you@example.com"
-                                   autoComplete="off"/>
+                                   autoComplete="off" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password-register" className="text-muted mb-1">
@@ -67,7 +67,7 @@ function HomeGuest () {
                                    name="password"
                                    className="form-control"
                                    type="password"
-                                   placeholder="Create a password"/>
+                                   placeholder="Create a password" />
                         </div>
                         <button type="submit" className="py-3 mt-4 btn btn-lg btn-success btn-block">
                             Sign up for ComplexApp
