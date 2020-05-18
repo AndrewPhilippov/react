@@ -1,16 +1,16 @@
 import React, { useEffect, useContext } from 'react';
 import { Link }                         from 'react-router-dom'
-import ExampleContext                   from '../ExampleContext'
+import DispatchContext                  from '../DispatchContext'
 
 
 function HeaderLoggedIn (props) {
-    const { setLoggedIn } = useContext( ExampleContext )
+    const appDispatch = useContext(DispatchContext)
 
     function handleLogOut () {
-        setLoggedIn( false )
-        localStorage.removeItem( 'appToken' )
-        localStorage.removeItem( 'appUsername' )
-        localStorage.removeItem( 'appAvatar' )
+        appDispatch({ type: 'logout' })
+        localStorage.removeItem('appToken')
+        localStorage.removeItem('appUsername')
+        localStorage.removeItem('appAvatar')
     }
 
     return (
@@ -26,7 +26,7 @@ function HeaderLoggedIn (props) {
             <a href="#"
                className="mr-2">
                 <img className="small-header-avatar"
-                     src={ localStorage.getItem( 'appAvatar' ) } />
+                     src={ localStorage.getItem('appAvatar') } />
             </a>
             <Link className="btn btn-sm btn-success mr-2"
                   to="/create-post">

@@ -1,28 +1,28 @@
 import React, { useEffect, useState, useContext } from 'react'
 import Page                                       from './Page'
 import Axios                                      from 'axios'
-import { withRouter } from 'react-router-dom'
-import ExampleContext from '../ExampleContext'
+import { withRouter }                             from 'react-router-dom'
+import DispatchContext                            from '../DispatchContext'
 
 function CreatePost (props) {
-    const [ title, setTitle ] = useState()
-    const [ body, setBody ] = useState()
-    const { addFlashMessage } = useContext( ExampleContext )
+    const [title, setTitle] = useState()
+    const [body, setBody] = useState()
+    const appDispatch = useContext(DispatchContext)
 
     async function handleSubmit (e) {
         e.preventDefault()
         try {
-            const response = await Axios.post( '/create-post', {
+            const response = await Axios.post('/create-post', {
                 title,
                 body,
-                token: localStorage.getItem( 'appToken' )
-            } )
+                token: localStorage.getItem('appToken')
+            })
             // Redirect to new post url
-            addFlashMessage( '<<<--- Congrats, you successfully created a post!!! --->>>' )
-            props.history.push( `/post/${ response.data }` )
-            console.log( 'New post was created' )
+            appDispatch({ type: 'flashMessage', value: '<<<--- Congrats, you successfully created a post!!! --->>>' })
+            props.history.push(`/post/${ response.data }`)
+            console.log('New post was created')
         } catch (e) {
-            console.log( 'There was a problem.' )
+            console.log('There was a problem.')
         }
     }
 
@@ -34,7 +34,7 @@ function CreatePost (props) {
                            className="text-muted mb-1">
                         <small>Title</small>
                     </label>
-                    <input onChange={ e => setTitle( e.target.value ) }
+                    <input onChange={ e => setTitle(e.target.value) }
                            autoFocus
                            name="title"
                            id="post-title"
@@ -49,7 +49,7 @@ function CreatePost (props) {
                            className="text-muted mb-1 d-block">
                         <small>Body Content</small>
                     </label>
-                    <textarea onChange={ e => setBody( e.target.value ) }
+                    <textarea onChange={ e => setBody(e.target.value) }
                               name="body"
                               id="post-body"
                               className="body-content tall-textarea form-control"
@@ -62,5 +62,5 @@ function CreatePost (props) {
     );
 }
 
-export default withRouter( CreatePost )
+export default withRouter(CreatePost)
 
