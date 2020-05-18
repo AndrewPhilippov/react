@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react';
-import Page                 from './Page'
+import React, { useEffect, useContext } from 'react'
+import Page                             from './Page'
+import StateContext                     from '../StateContext'
 
-function Home (props) {
+function Home () {
+    const appState = useContext(StateContext)
+
     function firstCapital (word) {
         return word.charAt(0).toUpperCase() + word.slice(1)
     }
+
     return (
         <Page title={ 'Your Feed' }>
             <div className="container container--narrow py-md-5">
-                <h2 className="text-center">Hello <strong>{ firstCapital(localStorage.getItem( 'appUsername' )) }</strong>, your feed
+                <h2 className="text-center">Hello <strong>{ firstCapital(appState.user.username) }</strong>, your feed
                     is empty.</h2>
                 <p className="lead text-muted text-center">Your feed displays the latest posts from the people you
                     follow.
