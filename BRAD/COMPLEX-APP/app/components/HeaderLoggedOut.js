@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import Axios                          from 'axios'
+import React, { useEffect, useState, useContext } from 'react';
+import Axios                                      from 'axios'
+import ExampleContext                             from '../ExampleContext'
 
-function HeaderLoggedOut ( props ) {
+function HeaderLoggedOut (props) {
     const [ username, setUsername ] = useState()
     const [ password, setPassword ] = useState()
+    const { setLoggedIn } = useContext( ExampleContext )
 
-    async function handleSubmit ( e ) {
+    async function handleSubmit (e) {
         e.preventDefault()
         try {
             const response = await Axios.post( '/login', {
@@ -16,7 +18,7 @@ function HeaderLoggedOut ( props ) {
                 localStorage.setItem( 'appToken', response.data.token )
                 localStorage.setItem( 'appUsername', response.data.username )
                 localStorage.setItem( 'appAvatar', response.data.avatar )
-                props.setLoggedIn( true )
+                setLoggedIn( true )
             } else {
                 console.log( 'Incorrect username/password' )
             }
@@ -35,14 +37,14 @@ function HeaderLoggedOut ( props ) {
                            className="form-control form-control-sm input-dark"
                            type="text"
                            placeholder="Username"
-                           autoComplete="off"/>
+                           autoComplete="off" />
                 </div>
                 <div className="col-md mr-0 pr-md-0 mb-3 mb-md-0">
                     <input onChange={ e => setPassword( e.target.value ) }
                            name="password"
                            className="form-control form-control-sm input-dark"
                            type="password"
-                           placeholder="Password"/>
+                           placeholder="Password" />
                 </div>
                 <div className="col-md-auto">
                     <button className="btn btn-success btn-sm">Sign In</button>

@@ -9,8 +9,9 @@ import About                            from './components/About'
 import Terms                            from './components/Terms'
 import Home                             from './components/Home'
 import ViewSinglePost                   from './components/ViewSinglePost'
-import FlashMessages                    from './components/FlashMessages'
-import Axios                            from 'axios'
+import FlashMessages  from './components/FlashMessages'
+import ExampleContext from './ExampleContext'
+import Axios          from 'axios'
 
 Axios.defaults.baseURL = 'http://localhost:3333'
 
@@ -23,10 +24,13 @@ function Main () {
     }
 
     return (
-        <BrowserRouter>
+        <ExampleContext.Provider value={ {
+            addFlashMessage,
+            setLoggedIn
+        } }>
+            <BrowserRouter>
             <FlashMessages messages={ flashMessages } />
-            <Header loggedIn={ loggedIn }
-                    setLoggedIn={ setLoggedIn } />
+            <Header loggedIn={ loggedIn } />
             <Switch>
                 <Route path={ '/' }
                        exact>
@@ -42,11 +46,12 @@ function Main () {
                     <ViewSinglePost />
                 </Route>
                 <Route path={ '/create-post' }>
-                    <CreatePost addFlashMessage={ addFlashMessage } />
+                    <CreatePost />
                 </Route>
             </Switch>
             <Footer />
         </BrowserRouter>
+        </ExampleContext.Provider>
     )
 }
 
