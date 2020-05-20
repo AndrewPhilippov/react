@@ -45,7 +45,6 @@ function ViewSinglePost (props) {
 
 	function isOwner () {
 		if (appState.loggedIn) {
-			console.log('appState.user.username === post.author.username', appState.user.username === post.author.username)
 			return appState.user.username === post.author.username
 		}
 		return false
