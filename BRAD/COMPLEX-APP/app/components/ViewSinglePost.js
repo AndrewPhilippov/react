@@ -5,6 +5,7 @@ import LoadingDotsIcon                from './LoadingDotsIcon'
 import Axios                          from 'axios'
 import { useParams, Link }            from 'react-router-dom'
 import ReactTooltip                   from 'react-tooltip'
+import NotFound                       from './NotFound'
 
 function ViewSinglePost () {
 	const ourRequest = Axios.CancelToken.source()
@@ -29,6 +30,11 @@ function ViewSinglePost () {
 		}
 	}, [])
 
+	if (!isLoading && !post) {
+		return (
+			<NotFound />
+		)
+	}
 	if (isLoading) return <Page title={ '...' }><LoadingDotsIcon /></Page>
 	const date = new Date(post.createdDate)
 	const dateFormatted = `${ date.getMonth() + 1 }/${ date.getDate() }/${ date.getFullYear() }`
@@ -38,10 +44,10 @@ function ViewSinglePost () {
 			<div className="d-flex justify-content-between">
 				<h2>{ post.title }</h2>
 				<span className="pt-2">
-                    <Link to={`/post/${post._id}/edit`}
-					   data-tip={ 'Edit' }
-					   data-for={ 'edit' }
-					   className="text-primary mr-2"><i className="fas fa-edit"></i></Link>{ ' ' }
+                    <Link to={ `/post/${ post._id }/edit` }
+						  data-tip={ 'Edit' }
+						  data-for={ 'edit' }
+						  className="text-primary mr-2"><i className="fas fa-edit"></i></Link>{ ' ' }
 					<ReactTooltip id={ 'edit' }
 								  className={ 'custom-tooltip' } />
                     <a className="delete-post-button text-danger"

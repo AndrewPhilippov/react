@@ -18,6 +18,7 @@ import Home           from './components/Home'
 import ViewSinglePost from './components/ViewSinglePost'
 import FlashMessages  from './components/FlashMessages'
 import Profile        from './components/Profile'
+import NotFound       from './components/NotFound'
 
 // Axios
 import Axios from 'axios'
@@ -95,6 +96,9 @@ function Main () {
 						</Route>
 						<Route path={ '/create-post' }>
 							<CreatePost />
+						</Route>
+						<Route>
+							<NotFound />
 						</Route>
 					</Switch>
 					<Footer />
