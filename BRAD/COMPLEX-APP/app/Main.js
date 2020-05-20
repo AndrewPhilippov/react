@@ -8,6 +8,7 @@ import DispatchContext                            from './DispatchContext'
 
 // My Components
 import CreatePost     from './components/CreatePost'
+import EditPost       from './components/EditPost'
 import Header         from './components/Header'
 import HomeGuest      from './components/HomeGuest'
 import Footer         from './components/Footer'
@@ -31,8 +32,8 @@ function Main () {
 		user: {
 			token: localStorage.getItem('appToken'),
 			username: localStorage.getItem('appUsername'),
-			avatar: localStorage.getItem('appAvatar')
-		}
+			avatar: localStorage.getItem('appAvatar'),
+		},
 	}
 
 	function ourReducer (draft, action) {
@@ -84,8 +85,13 @@ function Main () {
 						<Route path={ '/terms' }>
 							<Terms />
 						</Route>
-						<Route path={ '/post/:id' }>
+						<Route path={ '/post/:id' }
+							   exact>
 							<ViewSinglePost />
+						</Route>
+						<Route path={ '/post/:id/edit' }
+							   exact>
+							<EditPost />
 						</Route>
 						<Route path={ '/create-post' }>
 							<CreatePost />
