@@ -1,16 +1,48 @@
 import React, { useEffect, useContext } from 'react'
 import DispatchContext                  from '../DispatchContext'
+import { useImmer }                     from 'use-immer'
 
 function Search (props) {
 	const appDispatch = useContext(DispatchContext)
+
+	const [state, setState] = useImmer({
+										   searchTerm: '',
+										   results: [],
+										   show: 'neither',
+										   requestCount: 0,
+									   })
 
 	useEffect(() => {
 		document.addEventListener('keyup', searchKeyPressHandler)
 		return () => document.removeEventListener('keyup', searchKeyPressHandler)
 	}, [])
 
+	useEffect(() => {
+		const delay = setTimeout(() => {
+			setState(draft => {
+				draft.requestCount++
+			})
+		}, 700)
+
+		return () => clearTimeout(delay)
+		console.log(state.searchTerm)
+	}, [state.searchTerm])
+
+	useEffect(() => {
+		if (state.requestCount) {
+			//	Send Axios request here
+		}
+	}, [state.requestCount])
+
 	function searchKeyPressHandler (e) {
 		if (e.keyCode === 27) appDispatch({ type: 'closeSearch' })
+	}
+
+	function handleInput (e) {
+		const value = e.target.value
+		setState(draft => {
+			draft.searchTerm = value
+		})
 	}
 
 	return (
@@ -21,7 +53,8 @@ function Search (props) {
 						   className="search-overlay-icon">
 						<i className="fas fa-search"></i>
 					</label>
-					<input autoFocus
+					<input onChange={ handleInput }
+						   autoFocus
 						   type="text"
 						   autoComplete="off"
 						   id="live-search-field"
