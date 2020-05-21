@@ -19,6 +19,7 @@ import ViewSinglePost from './components/ViewSinglePost'
 import FlashMessages  from './components/FlashMessages'
 import Profile        from './components/Profile'
 import NotFound       from './components/NotFound'
+import Search         from './components/Search'
 
 // Axios
 import Axios from 'axios'
@@ -35,6 +36,7 @@ function Main () {
 			username: localStorage.getItem('appUsername'),
 			avatar: localStorage.getItem('appAvatar'),
 		},
+		isSearchOpen: false,
 	}
 
 	function ourReducer (draft, action) {
@@ -48,6 +50,12 @@ function Main () {
 				return
 			case 'flashMessage':
 				draft.flashMessages.push(action.value)
+				return
+			case 'openSearch':
+				draft.isSearchOpen = true
+				return
+			case 'closeSearch':
+				draft.isSearchOpen = false
 				return
 		}
 	}
@@ -101,6 +109,7 @@ function Main () {
 							<NotFound />
 						</Route>
 					</Switch>
+					{ state.isSearchOpen ? <Search /> : '' }
 					<Footer />
 				</BrowserRouter>
 			</DispatchContext.Provider>
