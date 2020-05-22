@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { Link }                         from 'react-router-dom'
 import DispatchContext                  from '../DispatchContext'
 import StateContext                     from '../StateContext'
+import ReactTooltip                     from 'react-tooltip'
 
 
 function HeaderLoggedIn (props) {
@@ -20,25 +21,38 @@ function HeaderLoggedIn (props) {
 	return (
 		<div className="flex-row my-3 my-md-0">
 			<a onClick={ handleSearchIcon }
+			   data-for={ 'search' }
+			   data-tip={ 'Search' }
 			   href="#"
 			   className="text-white mr-2 header-search-icon">
 				<i className="fas fa-search"></i>
-			</a>
-			<span className="mr-2 header-chat-icon text-white">
+			</a>&nbsp;
+			<ReactTooltip place={ 'bottom' }
+						  id={ 'search' } />
+			<span data-for={ 'chat' }
+				  data-tip={ 'Chat' }
+				  className="mr-2 header-chat-icon text-white">
             <i className="fas fa-comment"></i>
             <span className="chat-count-badge text-white"> </span>
-          </span>
-			<Link to={ `/profile/${ appState.user.username }` }
+          </span>&nbsp;
+			<ReactTooltip place={ 'bottom' }
+						  id={ 'chat' } />
+			<Link data-for={ 'avatar' }
+				  data-tip={ 'My Profile' }
+				  to={ `/profile/${ appState.user.username }` }
 				  className="mr-2">
 				<img
 					className="small-header-avatar"
 					src={ appState.user.avatar } />
-			</Link>
+			</Link>&nbsp;
+			<ReactTooltip place={ 'bottom' }
+						  id={ 'avatar' } />
 			<Link
 				className="btn btn-sm btn-success mr-2"
 				to="/create-post">
 				Create Post
-			</Link>
+			</Link>&nbsp;
+
 			<button
 				onClick={ handleLogOut }
 				className="btn btn-sm btn-secondary">
