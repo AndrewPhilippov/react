@@ -31,7 +31,6 @@ function Search (props) {
 			}, 700)
 
 			return () => clearTimeout(delay)
-			console.log(state.searchTerm)
 		} else {
 			setState(draft => {
 				draft.show = 'neither'
