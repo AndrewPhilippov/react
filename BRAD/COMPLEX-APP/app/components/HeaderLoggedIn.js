@@ -26,7 +26,7 @@ function HeaderLoggedIn (props) {
 			   href="#"
 			   className="text-white mr-2 header-search-icon">
 				<i className="fas fa-search"></i>
-			</a>&nbsp;
+				{ ' ' }</a>
 			<ReactTooltip place={ 'bottom' }
 						  id={ 'search' } />
 			<span data-for={ 'chat' }
@@ -34,7 +34,7 @@ function HeaderLoggedIn (props) {
 				  className="mr-2 header-chat-icon text-white">
             <i className="fas fa-comment"></i>
             <span className="chat-count-badge text-white"> </span>
-          </span>&nbsp;
+				{ ' ' }</span>
 			<ReactTooltip place={ 'bottom' }
 						  id={ 'chat' } />
 			<Link data-for={ 'avatar' }
@@ -44,14 +44,14 @@ function HeaderLoggedIn (props) {
 				<img
 					className="small-header-avatar"
 					src={ appState.user.avatar } />
-			</Link>&nbsp;
+				{ ' ' }</Link>
 			<ReactTooltip place={ 'bottom' }
 						  id={ 'avatar' } />
 			<Link
 				className="btn btn-sm btn-success mr-2"
 				to="/create-post">
 				Create Post
-			</Link>&nbsp;
+				{ ' ' }</Link>
 
 			<button
 				onClick={ handleLogOut }
