@@ -96,7 +96,7 @@ function ViewSinglePost (props) {
 						src={ post.author.avatar } />
 				</Link>
 				Posted
-				by
+				by{ ' ' }
 				<Link to={ `/profile/${ post.author.username }` }>
 					{ post.author.username }
 				</Link> on { dateFormatted }
