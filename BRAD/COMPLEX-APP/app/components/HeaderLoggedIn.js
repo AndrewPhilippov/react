@@ -29,7 +29,8 @@ function HeaderLoggedIn (props) {
 				{ ' ' }</a>
 			<ReactTooltip place={ 'bottom' }
 						  id={ 'search' } />
-			<span data-for={ 'chat' }
+			<span onClick={ () => appDispatch({ type: 'toggleChat' }) }
+				  data-for={ 'chat' }
 				  data-tip={ 'Chat' }
 				  className="mr-2 header-chat-icon text-white">
             <i className="fas fa-comment"></i>

@@ -21,6 +21,7 @@ import FlashMessages  from './components/FlashMessages'
 import Profile        from './components/Profile'
 import NotFound       from './components/NotFound'
 import Search         from './components/Search'
+import Chat           from './components/Chat'
 
 // Axios
 import Axios from 'axios'
@@ -38,6 +39,7 @@ function Main () {
 			avatar: localStorage.getItem('appAvatar'),
 		},
 		isSearchOpen: false,
+		isChatOpen: false,
 	}
 
 	function ourReducer (draft, action) {
@@ -57,6 +59,12 @@ function Main () {
 				return
 			case 'closeSearch':
 				draft.isSearchOpen = false
+				return
+			case 'toggleChat':
+				draft.isChatOpen = !draft.isChatOpen
+				return
+			case 'closeChat':
+				draft.isChatOpen = false
 				return
 		}
 	}
@@ -116,6 +124,7 @@ function Main () {
 								   unmountOnExit>
 						<Search />
 					</CSSTransition>
+					<Chat />
 					<Footer />
 				</BrowserRouter>
 			</DispatchContext.Provider>
