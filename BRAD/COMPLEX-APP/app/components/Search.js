@@ -72,7 +72,7 @@ function Search (props) {
 	}
 
 	return (
-		<div className="search-overlay">
+		<>
 			<div className="search-overlay-top shadow-sm">
 				<div className="container container--narrow">
 					<label htmlFor="live-search-field"
@@ -115,7 +115,7 @@ function Search (props) {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

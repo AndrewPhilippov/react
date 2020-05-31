@@ -1,27 +1,29 @@
 // Base
-import React, { useState, useReducer, useEffect } from 'react'
-import ReactDOM                                   from 'react-dom'
-import { useImmerReducer }                        from 'use-immer'
-import { CSSTransition }                          from 'react-transition-group'
-import { BrowserRouter, Switch, Route }           from 'react-router-dom'
-import StateContext                               from './StateContext'
-import DispatchContext                            from './DispatchContext'
+import React, { useState, useReducer, useEffect, Suspense } from 'react'
+import ReactDOM                                             from 'react-dom'
+import { useImmerReducer }                                  from 'use-immer'
+import { CSSTransition }                                    from 'react-transition-group'
+import { BrowserRouter, Switch, Route }                     from 'react-router-dom'
+import StateContext                                         from './StateContext'
+import DispatchContext                                      from './DispatchContext'
 
 // My Components
-import CreatePost     from './components/CreatePost'
-import EditPost       from './components/EditPost'
-import Header         from './components/Header'
-import HomeGuest      from './components/HomeGuest'
-import Footer         from './components/Footer'
-import About          from './components/About'
-import Terms          from './components/Terms'
-import Home           from './components/Home'
-import ViewSinglePost from './components/ViewSinglePost'
-import FlashMessages  from './components/FlashMessages'
-import Profile        from './components/Profile'
-import NotFound       from './components/NotFound'
-import Search         from './components/Search'
-import Chat           from './components/Chat'
+import LoadingDotsIcon from './components/LoadingDotsIcon'
+
+const CreatePost = React.lazy(() => import('./components/CreatePost'))
+const ViewSinglePost = React.lazy(() => import('./components/ViewSinglePost'))
+const Search = React.lazy(() => import('./components/Search'))
+const Chat = React.lazy(() => import('./components/Chat'))
+import EditPost        from './components/EditPost'
+import Header          from './components/Header'
+import HomeGuest       from './components/HomeGuest'
+import Footer          from './components/Footer'
+import About           from './components/About'
+import Terms           from './components/Terms'
+import Home            from './components/Home'
+import FlashMessages   from './components/FlashMessages'
+import Profile         from './components/Profile'
+import NotFound        from './components/NotFound'
 
 // Axios
 import Axios from 'axios'
@@ -118,43 +120,49 @@ function Main () {
 				<BrowserRouter>
 					<FlashMessages messages={ state.flashMessages } />
 					<Header />
-					<Switch>
-						<Route path={ '/' }
-							   exact>
-							{ state.loggedIn ? <Home /> : <HomeGuest /> }
-						</Route>
-						<Route path={ '/profile/:username' }>
-							<Profile />
-						</Route>
-						<Route path={ '/about-us' }>
-							<About />
-						</Route>
-						<Route path={ '/terms' }>
-							<Terms />
-						</Route>
-						<Route path={ '/post/:id' }
-							   exact>
-							<ViewSinglePost />
-						</Route>
-						<Route path={ '/post/:id/edit' }
-							   exact>
-							<EditPost />
-						</Route>
-						<Route path={ '/create-post' }>
-							<CreatePost />
-						</Route>
-						<Route>
-							<NotFound />
-						</Route>
-					</Switch>
-					<CSSTransition timeout={ 330 }
-								   in={ state.isSearchOpen }
-								   classNames={ 'search-overlay' }
-								   unmountOnExit>
-						<Search />
-					</CSSTransition>
-					<Chat />
-					<Footer />
+					<Suspense fallback={ <LoadingDotsIcon /> }>
+						<Switch>
+							<Route path={ '/' }
+								   exact>
+								{ state.loggedIn ? <Home /> : <HomeGuest /> }
+							</Route>
+							<Route path={ '/profile/:username' }>
+								<Profile />
+							</Route>
+							<Route path={ '/about-us' }>
+								<About />
+							</Route>
+							<Route path={ '/terms' }>
+								<Terms />
+							</Route>
+							<Route path={ '/post/:id' }
+								   exact>
+								<ViewSinglePost />
+							</Route>
+							<Route path={ '/post/:id/edit' }
+								   exact>
+								<EditPost />
+							</Route>
+							<Route path={ '/create-post' }>
+								<CreatePost />
+							</Route>
+							<Route>
+								<NotFound />
+							</Route>
+						</Switch>
+						<CSSTransition timeout={ 330 }
+									   in={ state.isSearchOpen }
+									   classNames={ 'search-overlay' }
+									   unmountOnExit>
+							<div className={ 'search-overlay' }>
+								<Suspense fallback={ '' }>
+									<Search />
+								</Suspense>
+							</div>
+						</CSSTransition>
+						<Suspense>{ state.loggedIn && <Chat /> }</Suspense>
+						<Footer />
+					</Suspense>
 				</BrowserRouter>
 			</DispatchContext.Provider>
 		</StateContext.Provider>
