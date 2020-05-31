@@ -28,7 +28,7 @@ import NotFound        from './components/NotFound'
 // Axios
 import Axios from 'axios'
 
-Axios.defaults.baseURL = 'http://localhost:3333'
+Axios.defaults.baseURL = process.env.BACKENDURL || ''
 
 function Main () {
 
