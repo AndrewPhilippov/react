@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:APP" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:APP" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8f6b13a-7708-4ab0-91f0-33ac604a5f99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/how-to-use.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/Person/Person.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/Person/Person.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAXIMILLIAN/lists-conditionals/src/registerServiceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1b5HVQDndAMTnFA5manpKvHmP39" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BRAD" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\REACT\BRAD" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\REACT\MAXIMILLIAN\lists-conditionals" />
+      <recent name="C:\Users\Andrew\Desktop\REACT\BRAD\backend-api" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.previewDist">
+    <configuration name="previewDist" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/BRAD/COMPLEX-APP/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="previewDist" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="webpack-build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/BRAD/COMPLEX-APP/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="webpack-build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.previewDist" />
+        <item itemvalue="npm.webpack-build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8f6b13a-7708-4ab0-91f0-33ac604a5f99" name="Default Changelist" comment="" />
+      <created>1587915057796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587915057796</updated>
+      <workItem from="1587915062605" duration="2179000" />
+      <workItem from="1587917354474" duration="5627000" />
+      <workItem from="1588014755070" duration="4782000" />
+      <workItem from="1588048304309" duration="4630000" />
+      <workItem from="1588146282878" duration="29000" />
+      <workItem from="1588485086733" duration="4478000" />
+      <workItem from="1588491563794" duration="65000" />
+      <workItem from="1588491642478" duration="161000" />
+      <workItem from="1588491815647" duration="1569000" />
+      <workItem from="1588493956228" duration="8956000" />
+      <workItem from="1588535257922" duration="101000" />
+      <workItem from="1589448423037" duration="1932000" />
+      <workItem from="1589611810399" duration="21214000" />
+      <workItem from="1589787921383" duration="12279000" />
+      <workItem from="1589873269112" duration="14474000" />
+      <workItem from="1589961877883" duration="17718000" />
+      <workItem from="1590264620314" duration="7210000" />
+      <workItem from="1590306440114" duration="12659000" />
+      <workItem from="1590389344239" duration="485000" />
+      <workItem from="1590436497582" duration="1092000" />
+      <workItem from="1590437604191" duration="399000" />
+      <workItem from="1590523296916" duration="5132000" />
+      <workItem from="1590698339665" duration="23000" />
+      <workItem from="1590698377256" duration="4521000" />
+      <workItem from="1590784595336" duration="865000" />
+      <workItem from="1590865567159" duration="3148000" />
+      <workItem from="1590911892423" duration="11714000" />
+      <workItem from="1591172372364" duration="1203000" />
+      <workItem from="1591727205348" duration="311000" />
+    </task>
+    <task id="LOCAL-00001" summary="Day 2 initial React sample for codepen.io">
+      <created>1587924586929</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587924586929</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Day 2 Completed">
+      <created>1588017462479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588017462479</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Looping through components with given data">
+      <created>1588018417802</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588018417802</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added React's useState">
+      <created>1588019368020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588019368020</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Sending form data to server from front for register and logon">
+      <created>1589625692877</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589625692877</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Search functionality completed">
+      <created>1590271826173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590271826173</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Following and followers tabs functionality added">
+      <created>1590352592280</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590352592280</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added socket.io to listen server for chat messages">
+      <created>1590526194643</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590526194643</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Completed base chat functionality">
+      <created>1590528420905</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590528420905</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adding front form validation">
+      <created>1590699501582</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590699501582</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Completed the app from Brad @LearWebCode">
+      <created>1590931728078</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590931728078</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Day 2 initial React sample for codepen.io" />
+    <MESSAGE value="Day 2 Completed" />
+    <MESSAGE value="Looping through components with given data" />
+    <MESSAGE value="Added React's useState" />
+    <MESSAGE value="Sending form data to server from front for register and login" />
+    <MESSAGE value="Search functionality completed" />
+    <MESSAGE value="Following and followers tabs functionality added" />
+    <MESSAGE value="Added socket.io to listen server for chat messages" />
+    <MESSAGE value="Completed base chat functionality" />
+    <MESSAGE value="Adding front form validation" />
+    <MESSAGE value="Completed the app from Brad @LearWebCode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed the app from Brad @LearWebCode" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1474" y="135" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588492696896">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1474" y="135" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1588492696896" />
+    <state x="-1487" y="98" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587923341178">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1487" y="98" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1587923341178" />
+    <state x="-1610" y="0" key="CommitChangelistDialog2" timestamp="1590931727636">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1610" y="0" key="CommitChangelistDialog2/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590931727636" />
+    <state x="-1425" y="81" key="FileChooserDialogImpl" timestamp="1588491622281">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1425" y="81" key="FileChooserDialogImpl/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1588491622281" />
+    <state x="-1920" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1590913842812">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1920" y="0" key="FileDocumentManager.FileCacheConflict/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590913842812" />
+    <state x="-1459" y="295" key="GitRewordDialog" timestamp="1589625735633">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1459" y="295" key="GitRewordDialog/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1589625735633" />
+    <state width="1481" height="196" key="GridCell.Tab.0.bottom" timestamp="1590917802198">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state width="1481" height="196" key="GridCell.Tab.0.bottom/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590917802198" />
+    <state width="1481" height="196" key="GridCell.Tab.0.center" timestamp="1590917802198">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state width="1481" height="196" key="GridCell.Tab.0.center/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590917802198" />
+    <state width="1481" height="196" key="GridCell.Tab.0.left" timestamp="1590917802198">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state width="1481" height="196" key="GridCell.Tab.0.left/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590917802198" />
+    <state width="1481" height="196" key="GridCell.Tab.0.right" timestamp="1590917802198">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state width="1481" height="196" key="GridCell.Tab.0.right/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590917802198" />
+    <state x="-1760" y="0" width="1338" height="800" key="SettingsEditor" timestamp="1589986249462">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1760" y="0" width="1338" height="800" key="SettingsEditor/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1589986249462" />
+    <state x="-3" y="0" width="1505" height="824" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589450109844" />
+    <state x="-1497" y="91" width="675" height="655" key="StructurePopup" timestamp="1590000563172">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1497" y="91" width="675" height="655" key="StructurePopup/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590000563172" />
+    <state x="-1659" y="80" key="Vcs.Push.Dialog.v2" timestamp="1590931730027">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1659" y="80" key="Vcs.Push.Dialog.v2/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590931730027" />
+    <state x="-1585" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589620571422">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1585" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1589620571422" />
+    <state x="-1377" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589620911734">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1377" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1589620911734" />
+    <state x="-1509" y="64" width="714" height="736" key="find.popup" timestamp="1590912949721">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1509" y="64" width="714" height="736" key="find.popup/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590912949721" />
+    <state x="-1442" y="56" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590917586063">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1442" y="56" key="git4idea.branch.GitSmartOperationDialog/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590917586063" />
+    <state x="-1579" y="183" width="840" height="1034" key="run.anything.popup" timestamp="1590912113798">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1579" y="183" width="840" height="1034" key="run.anything.popup/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590912113798" />
+    <state x="-1573" y="0" width="840" height="798" key="search.everywhere.popup" timestamp="1590922496738">
+      <screen x="-1920" y="0" width="1536" height="800" />
+    </state>
+    <state x="-1573" y="0" width="840" height="798" key="search.everywhere.popup/-1920.0.1536.800/0.0.1920.1040@-1920.0.1536.800" timestamp="1590922496738" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588498386509" />
+  </component>
+</project>
